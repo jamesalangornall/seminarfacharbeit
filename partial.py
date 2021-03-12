@@ -1,15 +1,25 @@
 from sympy import *
 
-x= Symbol('x')
+x = Symbol('x')
 
-y= Symbol('y')
+y = Symbol('y')
 
-function= sin(x**2)+y**2
+
+#infunc = input ("Dreidimensionale Funktion eingeben als function = [...]: ")
+#exec(infunc)
+#print(function)
 
 partialx = Derivative(function, x)
 partialy = Derivative(function, y)
 partialx.doit()
 partialy.doit()
-print(partialx.doit(),",",
-      partialy.doit())
 
+#partialxx = Derivative(partialx, x)
+#partialxy = Derivative(partialx, y)
+##Satz von Schwarz, daher kein partialyx
+#partialyy = Derivative(partialy, y)
+#partialxx.doit()
+#partialxy.doit()
+#partialyy.doit()
+
+print(partialx.doit(), ",", partialy.doit())
