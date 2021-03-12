@@ -1,5 +1,6 @@
-import LocalExtrema as le
+
 from sympy import *
+import LocalExtrema as le
 
 x = Symbol("x")
 y = Symbol("y")
@@ -7,7 +8,7 @@ y = Symbol("y")
 infunc = input("Dreidimensionale Funktion eingeben als function = (Funktion): ")
 exec(infunc)
 
-result = le.findLocalExtrema()
+result = le.findLocalExtrema(function)
 
 print(result)
 
