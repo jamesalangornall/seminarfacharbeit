@@ -2,13 +2,18 @@
 from sympy import *
 import LocalExtrema as le
 
-x = Symbol("x")
-y = Symbol("y")
+f = input("Dreidimensionale Funktion eingeben: f(x,y)= ")
 
-infunc = input("Dreidimensionale Funktion eingeben als function = (Funktion): ")
-exec(infunc)
+result = (le.findLocalExtrema(f))
 
-result = le.findLocalExtrema(function)
+for r in result:
+    if r.type == "min":
+        print("Lokales Minimum bei: " + str(r.x) + ", " + str(r.y))
+    elif r.type == "max":
+        print("Lokales Maximum bei: " + str(r.x) + ", " + str(r.y))
+    elif r.type == "saddle":
+        print("Sattelpunkt bei: " + str(r.x) + ", " + str(r.y))
+    elif r.type == "nosol":
+        print("Keine Lösung.")
 
-print(result)
 
