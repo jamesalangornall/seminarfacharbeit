@@ -14,6 +14,6 @@ for r in result:
     elif r.type == "saddle":
         print("Sattelpunkt bei: " + str(r.x) + ", " + str(r.y))
     elif r.type == "nosol":
-        print("Keine Lösung.")
+        print("Keine Lösung bei: " + str(r.x) + ", " + str(r.y))
 
 
